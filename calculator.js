@@ -1,12 +1,16 @@
 $("#calcular").click(function() {
-    regvalidation = /^[\d]+$/;
-    if (!regvalidation.test($("#num-a").text())){
-        alert('numero a invalido');
-	   return false;
+    var resultado;
+
+    var numA = parseInt($("#num-a").val());
+    var numB = parseInt($("#num-b").val());
+
+    if ($("#operator").val() == "+") {
+        resultado = numA + numB;
     }
-    if (!regvalidation.test($("#num-b").text())){
-	   alert ('numero b invalido');
-	   return false;
+
+    if ($("#operator").val() == "*") {
+        resultado = numA * numB;
     }
-$("#resultado").html(eval($("#num-a").val() + $("#operator").val() + $("#num-b").val()));
+    $("#resultado").html(resultado);
+
 });
