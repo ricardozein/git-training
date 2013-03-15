@@ -8,8 +8,16 @@ $("#calcular").click(function() {
         resultado = numA + numB;
     }
 
+    if ($("#operator").val() == "-") {
+        resultado = numA - numB;
+    }
+
     if ($("#operator").val() == "*") {
         resultado = numA * numB;
+    }
+
+    if ($("#operator").val() == "/") {
+        resultado = numA / numB;
     }
     $("#resultado").html(resultado);
 
